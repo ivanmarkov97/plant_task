@@ -88,18 +88,6 @@ def get_pos_by_group(group_global, value):
 			pos += np.argwhere(group == value)#group.index(value)
 			return pos
 
-def change_matrix_by_groups(matrix):
-	global group_global
-	matr = matrix.copy()
-	SWP = []
-	for group in group_global:
-		for g in group:
-			SWP.append(g)
-	for row in range(len(matrix)):
-		for column in range(len(matrix)):
-			matr[row][column] = matrix[ SWP[row] ][ SWP[column] ]
-	return matr
-
 def get_col_by_j(j, groups):
 	m = 0
 	k_len = 0
